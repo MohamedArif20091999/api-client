@@ -1,11 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import M from "materialize-css";
 
-const RequestType = () => {
+const RequestType = ({ reqTypeHandler }) => {
   useEffect(() => {
+    // console.log(reqTypeHandler);
     console.log(M);
-
     M.AutoInit();
   }, []);
   return (
@@ -13,7 +13,7 @@ const RequestType = () => {
       <div className="input-field row">
         <select
           className="col s2"
-          onChange={(e) => console.log(e.target.value)}
+          onChange={(e) => reqTypeHandler(e.target.value)}
         >
           <option value="" disabled selected>
             Choose your option
