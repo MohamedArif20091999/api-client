@@ -7,13 +7,13 @@ const Tabs = () => {
     M.AutoInit();
   }, []);
   return (
-    <div className="tab-items">
+    <div>
       <div className="col s12">
         <ul className="tabs">
-          <li className="tab col s3">
+          <li className="tab col s6">
             <a href="#test1">params</a>
           </li>
-          <li className="tab col s3">
+          <li className="tab col s6">
             <a className="active" href="#test2">
               headers
             </a>
@@ -21,10 +21,50 @@ const Tabs = () => {
         </ul>
       </div>
       <div id="test1" className="col s12">
-        <div className="ResponseBody">{/* <pre>{resData}</pre> */}</div>
+        <div class="input-field col s6">
+          <input
+            placeholder="key"
+            id="first_name"
+            type="text"
+            class="validate"
+          />
+        </div>
+        <div class="input-field col s6">
+          <input
+            placeholder="value"
+            id="last_name"
+            type="text"
+            class="validate"
+          />
+        </div>
       </div>
       <div id="test2" className="col s12">
-        Test2
+        <div class="i input-field col s5">
+          <input
+            placeholder="key"
+            id="first_name"
+            type="text"
+            class="validate"
+          />
+        </div>
+        <div class="input-field col s5">
+          <input
+            placeholder="value"
+            id="last_name"
+            type="text"
+            class="validate"
+          />
+        </div>
+        <div className="delete-btn col s1">
+          <a class="btn-floating btn-small  waves-effect waves-light grey">
+            <i class="material-icons">delete</i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <a class="btn-floating btn-small  waves-effect waves-light  right-align">
+          <i class="material-icons">add</i>
+        </a>
       </div>
     </div>
   );

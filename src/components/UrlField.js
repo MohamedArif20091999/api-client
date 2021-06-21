@@ -2,7 +2,7 @@ import React from "react";
 
 const UrlField = ({ urlHandler, submitHandler }) => {
   return (
-    <div className="col s12 container ">
+    <div className="c-2 col s12 container ">
       <div className="input-field ">
         <input
           autoComplete="off"

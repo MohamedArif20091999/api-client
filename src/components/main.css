@@ -5,7 +5,9 @@
 a{
     color: #26A69A;
 }
-
+.c-2{
+    margin-bottom: 32px !important;
+}
 pre{
     padding: 10px !important;
 }
@@ -14,19 +16,15 @@ pre{
     padding-bottom: 32px !important;
 }
 .ResponseBody{
-    /* margin-top: 32px !important; */
-    overflow: auto !important;
+        /* margin-top: 32px !important; */
     max-height: 320px !important;
     background-color: #DCDCDC
     ;
+    overflow: auto !important;
     height: 320px !important;
     width: 320px !important;
 }
-.res-body{
-    /* padding-top: 100px !important; */
-    /* width: 320px !important; */
-    display: inline-block !important;
-}
+
 .tabs .tab a{
     color:#26A69A;
 } /*Black color to the text*/
@@ -51,16 +49,30 @@ pre{
     /*Custom Background Color While Active*/
   }
   
-.options-container{
-    /* display: flex !important; */
-    text-align: center !important;
+
+.sub-container{
+    /* display: grid; */
+    margin-top: 30px !important;
+    
+   
+}
+.float-child{
+    width: 40%;
+    float: left;
+    margin: 20px;
 }
 
-.tab-items{
-    /* padding-top: 100px !important; */
-    /* margin-top: 100px !important; */
-    /* padding-top: 10%; */
-    /* flex-grow: 1 !important; */
-    display: inline-block !important;
-    /* padding-left: 32px ; */
+
+
+/* .i .input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+    border: 1px solid #9e9e9e !important;
+    border-radius: 5px !important;
+    padding: 1px !important;
+}  */
+
+.delete-btn{
+    margin-top: 27px !important;    
+}
+.delete-btn:hover{
+    color: aqua !important;
 }

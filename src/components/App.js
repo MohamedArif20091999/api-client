@@ -11,7 +11,7 @@ import "./main.css";
 const App = () => {
   const [requestType, setRequestType] = useState("get");
   const [reqUrl, setReqUrl] = useState("");
-  const [resData, setResData] = useState("Nothing to show");
+  const [resData, setResData] = useState("Nothing to show :(");
 
   useEffect(() => {}, [setRequestType]);
 
@@ -43,9 +43,15 @@ const App = () => {
         submitHandler={handleSendRequest}
         urlHandler={handleUrl}
       ></UrlField>
-      <div className="options-container align-center">
-        <ResponseBody resData={resData}></ResponseBody>
-        <Tabs></Tabs>
+      <div className="sub-container">
+        <div className="sub-container align-center">
+          <div className="float-child">
+            <ResponseBody resData={resData}></ResponseBody>
+          </div>
+          <div className="float-child child-1">
+            <Tabs></Tabs>
+          </div>
+        </div>
       </div>
     </div>
   );
