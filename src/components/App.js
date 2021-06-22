@@ -44,8 +44,8 @@ const App = () => {
     let { data } = await axios({
       method: requestType,
       url: reqUrl,
-      params: params,
-      headers: headers,
+      // params: params,
+      // headers: headers,
     });
     setResData(JSON.stringify(data, null, 2));
   };
