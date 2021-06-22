@@ -43,12 +43,16 @@
   padding: 0px;
 }
 .logo{
-  text-align: end;
+  /* text-align: end; */
   display: inline-block;
 }
 .content{
   float: left;
   font-size: 15px;
-  padding-top: 10px !important;
+  padding-top: 13px !important;
   color: #AAAAAA;
+}
+.logo-container{
+  text-align: end !important;
+  margin-right: 20px;
 }

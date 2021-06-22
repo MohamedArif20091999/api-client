@@ -17,7 +17,6 @@ const Tabs = ({
   }, []);
 
   const renderItems = queryParams.map((queryParam, i) => {
-    console.log(queryParam);
     return (
       <div key={i}>
         <div className="col s12">

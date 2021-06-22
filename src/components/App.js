@@ -26,10 +26,6 @@ const App = () => {
   };
 
   const handleSendRequest = async () => {
-    console.log(requestType);
-    console.log(reqUrl);
-    // let { data } = await axios.get(`${reqUrl}`);
-    console.log(queryParams);
     let params = {};
     let headers = {};
     for (let i of queryParams) {
@@ -51,12 +47,10 @@ const App = () => {
       params: params,
       headers: headers,
     });
-    console.log(JSON.stringify(data, null, 2));
     setResData(JSON.stringify(data, null, 2));
   };
 
   const handleQueryParams = (data, index, property) => {
-    console.log(data, index, property);
     setQueryParams(
       queryParams.map((param, i) =>
         i === index ? { ...param, [property]: data } : param
@@ -70,12 +64,10 @@ const App = () => {
   };
 
   const removeQueryParam = (index) => {
-    console.log(index);
     setQueryParams(queryParams.filter((param, i) => i !== index));
   };
 
   const handleHeaderParams = (data, index, property) => {
-    console.log(data, index, property);
     setHeaderParams(
       headerParams.map((param, i) =>
         i === index ? { ...param, [property]: data } : param
@@ -89,16 +81,11 @@ const App = () => {
   };
 
   const removeHeaderParam = (index) => {
-    console.log(index);
     setHeaderParams(headerParams.filter((param, i) => i !== index));
   };
 
   return (
     <div>
-      <div className="logo">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="content">Made with react</p>
-      </div>
       <div className="container row">
         <div className="req-details">
           <h5>
@@ -129,6 +116,12 @@ const App = () => {
               ></Tabs>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="logo-container">
+        <div className="logo">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p className="content">Made with react</p>
         </div>
       </div>
     </div>
