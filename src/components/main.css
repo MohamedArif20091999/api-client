@@ -52,7 +52,7 @@ pre{
 
 .sub-container{
     /* display: grid; */
-    margin-top: 30px !important;
+    margin-top: 35px !important;
     
    
 }
@@ -71,7 +71,7 @@ pre{
 }  */
 
 .delete-btn{
-    margin-top: 27px !important;    
+    margin-top: 30px !important;    
 }
 .delete-btn:hover{
     color: aqua !important;
