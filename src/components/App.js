@@ -4,6 +4,7 @@ import RequestType from "./RequestType";
 import UrlField from "./UrlField";
 import ResponseBody from "./ResponseBody";
 import Tabs from "./Tabs";
+import logo from "./logo.svg";
 
 import axios from "axios";
 
@@ -14,8 +15,6 @@ const App = () => {
   const [resData, setResData] = useState("Nothing to show :(");
   const [queryParams, setQueryParams] = useState([{ key: "", value: "" }]);
   const [headerParams, setHeaderParams] = useState([{ key: "", value: "" }]);
-
-  // useEffect(() => {}, [setRequestType]);
 
   const handleRequestType = (reqType) => {
     setRequestType(reqType);
@@ -28,7 +27,29 @@ const App = () => {
   const handleSendRequest = async () => {
     console.log(requestType);
     console.log(reqUrl);
-    let { data } = await axios.get(`${reqUrl}`);
+    // let { data } = await axios.get(`${reqUrl}`);
+    console.log(queryParams);
+    let params = {};
+    let headers = {};
+    for (let i of queryParams) {
+      params[i.key] = i.value;
+    }
+    for (let i of headerParams) {
+      headers[i.key] = i.value;
+    }
+    console.log({
+      method: requestType,
+      url: reqUrl,
+      params: params,
+      headers: headers,
+    });
+
+    let { data } = await axios({
+      method: requestType,
+      url: reqUrl,
+      params: params,
+      headers: headers,
+    });
     console.log(JSON.stringify(data, null, 2));
     setResData(JSON.stringify(data, null, 2));
   };
@@ -77,7 +98,7 @@ const App = () => {
         <h5>
           Send a {requestType.toUpperCase()} request to <a>{reqUrl}</a>
         </h5>
-        <h1>KEY: {queryParams.length}</h1>
+        {/* <h1>KEY: {queryParams.length}</h1> */}
       </div>
       <RequestType reqTypeHandler={handleRequestType}></RequestType>
       <UrlField
