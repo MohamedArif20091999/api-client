@@ -3,7 +3,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  
+  height: 8vmin;
   pointer-events: none;
 }
 
@@ -35,4 +36,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo > p{
+  margin: 0px;
+  padding: 0px;
+}
+.logo{
+  text-align: end;
+  display: inline-block;
+}
+.content{
+  float: left;
+  font-size: 15px;
+  padding-top: 10px !important;
+  color: #AAAAAA;
 }

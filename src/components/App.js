@@ -5,6 +5,7 @@ import UrlField from "./UrlField";
 import ResponseBody from "./ResponseBody";
 import Tabs from "./Tabs";
 import logo from "./logo.svg";
+import "./css/App.css";
 
 import axios from "axios";
 
@@ -93,34 +94,40 @@ const App = () => {
   };
 
   return (
-    <div className="container row">
-      <div className="req-details">
-        <h5>
-          Send a {requestType.toUpperCase()} request to <a>{reqUrl}</a>
-        </h5>
-        {/* <h1>KEY: {queryParams.length}</h1> */}
+    <div>
+      <div className="logo">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p className="content">Made with react</p>
       </div>
-      <RequestType reqTypeHandler={handleRequestType}></RequestType>
-      <UrlField
-        submitHandler={handleSendRequest}
-        urlHandler={handleUrl}
-      ></UrlField>
-      <div className="sub-container">
-        <div className="sub-container align-center">
-          <div className="float-child">
-            <ResponseBody resData={resData}></ResponseBody>
-          </div>
-          <div className="float-child child-1">
-            <Tabs
-              handleHeaderParams={handleHeaderParams}
-              removeHeaderParam={removeHeaderParam}
-              addHeaderParamField={addHeaderParamField}
-              headerParams={headerParams}
-              removeQueryParam={removeQueryParam}
-              handleQueryParams={handleQueryParams}
-              queryParams={queryParams}
-              addQueryParamField={addQueryParamField}
-            ></Tabs>
+      <div className="container row">
+        <div className="req-details">
+          <h5>
+            Send a {requestType.toUpperCase()} request to <a>{reqUrl}</a>
+          </h5>
+          {/* <h1>KEY: {queryParams.length}</h1> */}
+        </div>
+        <RequestType reqTypeHandler={handleRequestType}></RequestType>
+        <UrlField
+          submitHandler={handleSendRequest}
+          urlHandler={handleUrl}
+        ></UrlField>
+        <div className="sub-container">
+          <div className="sub-container align-center">
+            <div className="float-child">
+              <ResponseBody resData={resData}></ResponseBody>
+            </div>
+            <div className="float-child child-1">
+              <Tabs
+                handleHeaderParams={handleHeaderParams}
+                removeHeaderParam={removeHeaderParam}
+                addHeaderParamField={addHeaderParamField}
+                headerParams={headerParams}
+                removeQueryParam={removeQueryParam}
+                handleQueryParams={handleQueryParams}
+                queryParams={queryParams}
+                addQueryParamField={addQueryParamField}
+              ></Tabs>
+            </div>
           </div>
         </div>
       </div>
