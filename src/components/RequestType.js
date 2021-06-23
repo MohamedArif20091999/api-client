@@ -7,7 +7,7 @@ const RequestType = ({ reqTypeHandler }) => {
     M.AutoInit();
   }, []);
   return (
-    <div className="container">
+    <div className="col s2">
       <div className="input-field row">
         <select
           selected

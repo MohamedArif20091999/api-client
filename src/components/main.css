@@ -12,8 +12,9 @@ pre{
     padding: 10px !important;
 }
 .req-details{
-    margin-top: 32px !important;
+    margin-top: 34px !important;
     padding-bottom: 32px !important;
+    margin-bottom: 42px !important;
 }
 .ResponseBody{
         /* margin-top: 32px !important; */
@@ -52,7 +53,7 @@ pre{
 
 .sub-container{
     /* display: grid; */
-    margin-top: 35px !important;
+    margin-top: 45px !important;
     
    
 }
@@ -64,4 +65,18 @@ pre{
 
 .delete-btn{
     margin-top: 30px !important;    
+}
+.submit-btn{
+    margin-top: 16px !important;
+}
+
+textarea{
+    height: 13rem !important;
+    background-color: #DCDCDC;
+    outline-color: #26A69A;
+    border: none !important;
+      
+}
+.text> p{
+    text-align: center !important;
 }

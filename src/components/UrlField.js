@@ -2,7 +2,7 @@ import React from "react";
 
 const UrlField = ({ urlHandler, submitHandler }) => {
   return (
-    <div className="c-2 col s12 container ">
+    <div className="c-2 col s8">
       <div className="input-field ">
         <input
           autoComplete="off"
@@ -13,7 +13,7 @@ const UrlField = ({ urlHandler, submitHandler }) => {
         />
         <label htmlFor="url">URL</label>
       </div>
-      <div className="center-align">
+      {/* <div className="">
         <button
           className="btn waves-effect waves-light center-align"
           type="submit"
@@ -22,7 +22,7 @@ const UrlField = ({ urlHandler, submitHandler }) => {
         >
           Send
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
