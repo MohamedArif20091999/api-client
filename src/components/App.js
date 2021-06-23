@@ -37,7 +37,7 @@ const App = () => {
     for (let i of headerParams) {
       headers[i.key] = i.value;
     }
-    let reqBody = JSON.parse(requestBody);
+    let reqBody = requestBody;
     console.log({
       method: requestType,
       url: reqUrl,
