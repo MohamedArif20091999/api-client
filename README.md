@@ -2,5 +2,6 @@
 <h2 align="center">
    <strong>api-client</strong>
 </h2>
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
-
+<p align="center">
+<img src="https://github.com/MohamedArif20091999/api-client/blob/base-features/public/client.gif" width="40" height="40" />
+</p>
